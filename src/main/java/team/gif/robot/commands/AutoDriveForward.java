@@ -8,7 +8,7 @@ public class AutoDriveForward extends Command {
 
     private int timer;
 
-    public AutoDriveForward(double encoderSetPoint) {
+    public AutoDriveForward() {
         super();
         //addRequirements(Robot.climber); // uncomment
         addRequirements(Robot.driveTrain);

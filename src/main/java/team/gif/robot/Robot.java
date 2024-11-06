@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
 import team.gif.robot.commands.ArcadeDrive;
+import team.gif.robot.commands.AutoDriveForward;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.drivers.Pigeon;
 
@@ -45,6 +46,7 @@ public class Robot extends TimedRobot {
     driveTrain = new DriveTrain();
     driveTrain.setDefaultCommand(new ArcadeDrive());
     //driveTrain.setDefaultCommand(new TankDrive());
+    autonomousCommand = new AutoDriveForward();
 
 
     oi = new OI();
