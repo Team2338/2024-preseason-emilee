@@ -8,8 +8,8 @@ import team.gif.robot.RobotMap;
 
 
 public class DriveTrain extends SubsystemBase {
-    private final WPI_TalonSRX leftCIM;
-    private final WPI_TalonSRX rightCIM;
+    public final WPI_TalonSRX leftCIM;
+    public final WPI_TalonSRX rightCIM;
 
     private DifferentialDrive drive;
     public DriveTrain() {

@@ -27,6 +27,7 @@ public class Robot extends TimedRobot {
   public static EventFileLogger eventLogger;
   public static DriveTrain driveTrain;
   public static OI oi;
+  public static AutoDriveForward autoDriveForward;
 
   public static Pigeon pigeon;
 
@@ -46,8 +47,7 @@ public class Robot extends TimedRobot {
     driveTrain = new DriveTrain();
     driveTrain.setDefaultCommand(new ArcadeDrive());
     //driveTrain.setDefaultCommand(new TankDrive());
-    autonomousCommand = new AutoDriveForward();
-
+    autonomousCommand = new AutoDriveForward(Constants.Auto_Time);
 
     oi = new OI();
     uiSmartDashboard = new UiSmartDashboard();
@@ -84,13 +84,17 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     if (autonomousCommand != null) {
-      autonomousCommand.cancel();
+      autonomousCommand.schedule();
     }
   }
 
   /** This function is called periodically during autonomous. */
   @Override
-  public void autonomousPeriodic() {}
+  public void autonomousPeriodic() {
+    if (autonomousCommand != null) {
+      autonomousCommand.cancel();
+    }
+  }
 
   @Override
   public void teleopInit() {
@@ -98,9 +102,6 @@ public class Robot extends TimedRobot {
     // teleop starts running. If you want the autonomous to
     // continue until interrupted by another command, remove
     // this line or comment it out.
-    if (autonomousCommand != null) {
-      autonomousCommand.cancel();
-    }
   }
 
   /** This function is called periodically during operator control. */

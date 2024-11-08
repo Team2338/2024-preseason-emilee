@@ -1,42 +1,46 @@
 package team.gif.robot.commands;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.Command;
 import team.gif.robot.Robot;
 import team.gif.robot.subsystems.DriveTrain;
 
 public class AutoDriveForward extends Command {
 
-    private int timer;
+    double intialTime;
+    double Time;
 
-    public AutoDriveForward() {
+
+    public AutoDriveForward(double time) {
         super();
-        //addRequirements(Robot.climber); // uncomment
         addRequirements(Robot.driveTrain);
+        Time = time;
     }
 
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
-        timer = 0;
-
+        intialTime = Timer.getFPGATimestamp();
     }
 
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        timer++;
-
-        Robot.driveTrain.driveTank(1,1);
+        Robot.driveTrain.rightCIM.set(ControlMode.PercentOutput, 0.5);
+        Robot.driveTrain.leftCIM.set(ControlMode.PercentOutput, 0.5);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
     @Override
     public boolean isFinished() {
-
-        return timer >= 100;
+        return (Timer.getFPGATimestamp() > intialTime + Time);
     }
 
     // Called when the command ends or is interrupted.
     @Override
-    public void end(boolean interrupted) {}
+    public void end(boolean interrupted) {
+        Robot.driveTrain.rightCIM.set(ControlMode.PercentOutput, 0.0);
+        Robot.driveTrain.leftCIM.set(ControlMode.PercentOutput, 0.0);
+    }
 }
