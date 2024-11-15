@@ -21,6 +21,8 @@ import java.util.Timer;
  */
 public final class Constants {
     public static final double Auto_Time = 5;
+    public static final double COLLECTOR_INTAKE_PERCENT_POWER = .2;
+    public static final double COLLECTOR_REVERSE_PERCENT_POWER = .2;
 
 
 }

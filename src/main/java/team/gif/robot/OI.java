@@ -2,6 +2,9 @@ package team.gif.robot;
 
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+import team.gif.robot.commands.CollectorCimControlForward;
+import team.gif.robot.commands.CollectorCimControlReverse;
+
 public class OI {
     /*
      * Instantiate all joysticks/controllers and their buttons here
@@ -85,6 +88,8 @@ public class OI {
          * Simple Test:
          *   aX.onTrue(new PrintCommand("aX"));
          */
+        dX.whileTrue(new CollectorCimControlForward());
+        dY.whileTrue(new CollectorCimControlReverse());
 
 
 

@@ -12,6 +12,7 @@ import team.gif.lib.logging.TelemetryFileLogger;
 import team.gif.robot.commands.ArcadeDrive;
 import team.gif.robot.commands.AutoDriveForward;
 import team.gif.robot.subsystems.DriveTrain;
+import team.gif.robot.subsystems.drivers.CollectorInCIM;
 import team.gif.robot.subsystems.drivers.Pigeon;
 
 /**
@@ -28,6 +29,7 @@ public class Robot extends TimedRobot {
   public static DriveTrain driveTrain;
   public static OI oi;
   public static AutoDriveForward autoDriveForward;
+  public static CollectorInCIM collectorInCIM;
 
   public static Pigeon pigeon;
 
@@ -47,6 +49,7 @@ public class Robot extends TimedRobot {
     driveTrain = new DriveTrain();
     driveTrain.setDefaultCommand(new ArcadeDrive());
     //driveTrain.setDefaultCommand(new TankDrive());
+    collectorInCIM = new CollectorInCIM();
     autonomousCommand = new AutoDriveForward(Constants.Auto_Time);
 
     oi = new OI();
