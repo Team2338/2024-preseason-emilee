@@ -90,10 +90,10 @@ public class OI {
          * Simple Test:
          *   aX.onTrue(new PrintCommand("aX"));
          */
-        dX.whileTrue(new CollectorCimControlForward());
-        dY.whileTrue(new CollectorCimControlReverse());
-        dA.whileTrue(new IndexerForward());
-        dB.whileTrue(new IndexerBackwards());
+        aX.whileTrue(new CollectorCimControlForward());
+        aY.whileTrue(new CollectorCimControlReverse());
+        aA.whileTrue(new IndexerForward());
+        aB.whileTrue(new IndexerBackwards());
 
 
 
