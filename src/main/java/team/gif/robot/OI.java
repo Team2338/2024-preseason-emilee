@@ -4,6 +4,8 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import team.gif.robot.commands.CollectorCimControlForward;
 import team.gif.robot.commands.CollectorCimControlReverse;
+import team.gif.robot.commands.IndexerBackwards;
+import team.gif.robot.commands.IndexerForward;
 
 public class OI {
     /*
@@ -90,6 +92,8 @@ public class OI {
          */
         dX.whileTrue(new CollectorCimControlForward());
         dY.whileTrue(new CollectorCimControlReverse());
+        dA.whileTrue(new IndexerForward());
+        dB.whileTrue(new IndexerBackwards());
 
 
 

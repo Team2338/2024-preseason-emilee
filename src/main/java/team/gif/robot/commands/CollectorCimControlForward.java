@@ -9,6 +9,7 @@ public class CollectorCimControlForward extends Command {
     public CollectorCimControlForward() {
         super();
         //addRequirements(Robot.climber); // uncomment
+        addRequirements(Robot.collectorInCIM);
     }
 
     // Called when the command is initially scheduled.
