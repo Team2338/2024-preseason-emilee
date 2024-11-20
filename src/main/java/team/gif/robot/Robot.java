@@ -11,6 +11,7 @@ import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
 import team.gif.robot.commands.ArcadeDrive;
 import team.gif.robot.commands.AutoDriveForward;
+import team.gif.robot.commands.TankDrive;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.IndexerCIM;
 import team.gif.robot.subsystems.drivers.CollectorInCIM;
@@ -49,8 +50,8 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     robotContainer = new RobotContainer();
     driveTrain = new DriveTrain();
-    driveTrain.setDefaultCommand(new ArcadeDrive());
-    //driveTrain.setDefaultCommand(new TankDrive());
+    //driveTrain.setDefaultCommand(new ArcadeDrive());
+    driveTrain.setDefaultCommand(new TankDrive());
     collectorInCIM = new CollectorInCIM();
     indexerCIM = new IndexerCIM();
     autonomousCommand = new AutoDriveForward(Constants.Auto_Time);

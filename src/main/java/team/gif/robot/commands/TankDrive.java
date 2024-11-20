@@ -21,7 +21,7 @@ public class TankDrive extends Command {
         double rightPos = Robot.oi.driver.getRightY();
         double leftPos = Robot.oi.driver.getLeftY();
 
-        Robot.driveTrain.driveTank(leftPos, rightPos);
+        Robot.driveTrain.driveTank(-leftPos, rightPos);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.

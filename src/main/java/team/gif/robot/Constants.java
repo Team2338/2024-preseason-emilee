@@ -21,10 +21,10 @@ import java.util.Timer;
  */
 public final class Constants {
     public static final double Auto_Time = 5;
-    public static final double COLLECTOR_INTAKE_PERCENT_POWER = .2;
-    public static final double COLLECTOR_REVERSE_PERCENT_POWER = .2;
-    public static final double INDEXER_CIM_FORWARD_PERCENT_POWER = .2;
-    public static final double INDEXER_CIM_BACKWARD_PERCENT_POWER = .2;
+    public static final double COLLECTOR_INTAKE_PERCENT_POWER = -0.5;
+    public static final double COLLECTOR_REVERSE_PERCENT_POWER = 0.5;
+    public static final double INDEXER_CIM_FORWARD_PERCENT_POWER = -0.5;
+    public static final double INDEXER_CIM_BACKWARD_PERCENT_POWER = 0.5;
 
 
 }
