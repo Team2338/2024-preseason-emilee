@@ -12,13 +12,13 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import team.gif.robot.RobotMap;
 
-public class CollectorSRXMotor extends SubsystemBase {
+public class CollectorPivotSRXMotor extends SubsystemBase {
     /** Creates a new ExampleSubsystem. */
     public TalonSRX winch;
     private static TalonSRX motor;
     TalonSRX talonsrx = new TalonSRX(1);
-    public CollectorSRXMotor( ) {
-        motor = new TalonSRX(RobotMap.TALON_COLLECTOR_ID);
+    public CollectorPivotSRXMotor( ) {
+        motor = new TalonSRX(RobotMap.PIVOT_COLLECTOR_ID);
         motor.configFactoryDefault();
         motor.setNeutralMode(NeutralMode.Brake);
 

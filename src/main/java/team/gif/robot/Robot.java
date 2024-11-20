@@ -11,7 +11,7 @@ import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
 import team.gif.robot.commands.ArcadeDrive;
 import team.gif.robot.commands.AutoDriveForward;
-import team.gif.robot.subsystems.CollectorSRXMotor;
+import team.gif.robot.subsystems.CollectorPivotSRXMotor;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.IndexerCIM;
 import team.gif.robot.subsystems.drivers.CollectorInCIM;
@@ -33,7 +33,7 @@ public class Robot extends TimedRobot {
   public static AutoDriveForward autoDriveForward;
   public static CollectorInCIM collectorInCIM;
   public static IndexerCIM indexerCIM;
-  public static CollectorSRXMotor collectorPivot;
+  public static CollectorPivotSRXMotor collectorPivot;
 
   public static Pigeon pigeon;
 
@@ -56,7 +56,7 @@ public class Robot extends TimedRobot {
     collectorInCIM = new CollectorInCIM();
     indexerCIM = new IndexerCIM();
     autonomousCommand = new AutoDriveForward(Constants.Auto_Time);
-    collectorPivot = new CollectorSRXMotor();
+    collectorPivot = new CollectorPivotSRXMotor();
 
     oi = new OI();
     uiSmartDashboard = new UiSmartDashboard();

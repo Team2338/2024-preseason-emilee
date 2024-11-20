@@ -10,5 +10,5 @@ public abstract class RobotMap {
 
     public static final int LEFT_CIM_ID = 1;
     public static final int RIGHT_CIM_ID = 0;
-    public static final int TALON_COLLECTOR_ID = 31;
+    public static final int PIVOT_COLLECTOR_ID = 31;
 }
