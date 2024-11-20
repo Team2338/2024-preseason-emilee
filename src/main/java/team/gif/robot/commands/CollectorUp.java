@@ -24,7 +24,7 @@ public class CollectorUp extends Command {
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
     @Override
     public boolean isFinished() {
-    return false;
+    return Robot.collectorPivot.getPosition()>-300;
     }
 
     // Called when the command ends or is interrupted.

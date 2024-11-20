@@ -60,7 +60,7 @@ public class Robot extends TimedRobot {
 
     oi = new OI();
     uiSmartDashboard = new UiSmartDashboard();
-
+    collectorPivot.zeroEncoder();
   }
 
   /**
@@ -79,7 +79,7 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
 
     uiSmartDashboard.updateUI();
-
+    System.out.println(collectorPivot.getPosition());
   }
 
   /** This function is called once each time the robot enters Disabled mode. */
