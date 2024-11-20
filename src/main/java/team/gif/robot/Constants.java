@@ -25,6 +25,8 @@ public final class Constants {
     public static final double COLLECTOR_REVERSE_PERCENT_POWER = .2;
     public static final double INDEXER_CIM_FORWARD_PERCENT_POWER = .2;
     public static final double INDEXER_CIM_BACKWARD_PERCENT_POWER = .2;
+    public static final double TALON_COLLECTOR_DOWN = 45;
+
 
 
 }
