@@ -11,6 +11,7 @@ import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
 import team.gif.robot.commands.ArcadeDrive;
 import team.gif.robot.commands.AutoDriveForward;
+import team.gif.robot.subsystems.CollectorPivotSRXMotor;
 import team.gif.robot.commands.TankDrive;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.IndexerCIM;
@@ -33,6 +34,7 @@ public class Robot extends TimedRobot {
   public static AutoDriveForward autoDriveForward;
   public static CollectorInCIM collectorInCIM;
   public static IndexerCIM indexerCIM;
+  public static CollectorPivotSRXMotor collectorPivot;
 
   public static Pigeon pigeon;
 
@@ -55,10 +57,11 @@ public class Robot extends TimedRobot {
     collectorInCIM = new CollectorInCIM();
     indexerCIM = new IndexerCIM();
     autonomousCommand = new AutoDriveForward(Constants.Auto_Time);
+    collectorPivot = new CollectorPivotSRXMotor();
 
     oi = new OI();
     uiSmartDashboard = new UiSmartDashboard();
-
+    collectorPivot.zeroEncoder();
   }
 
   /**
@@ -77,7 +80,7 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
 
     uiSmartDashboard.updateUI();
-
+    System.out.println(collectorPivot.getPosition());
   }
 
   /** This function is called once each time the robot enters Disabled mode. */

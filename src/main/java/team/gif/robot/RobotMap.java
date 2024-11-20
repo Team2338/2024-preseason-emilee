@@ -10,4 +10,5 @@ public abstract class RobotMap {
 
     public static final int LEFT_CIM_ID = 2;
     public static final int RIGHT_CIM_ID =10 ;;
+    public static final int PIVOT_COLLECTOR_ID = 31;
 }

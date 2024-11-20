@@ -1,9 +1,13 @@
 package team.gif.robot;
 
+import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import team.gif.robot.commands.CollectorCimControlForward;
 import team.gif.robot.commands.CollectorCimControlReverse;
+import team.gif.robot.commands.CollectorDown;
+import team.gif.robot.commands.CollectorUp;
+import team.gif.robot.commands.CollectorZero;
 import team.gif.robot.commands.IndexerBackwards;
 import team.gif.robot.commands.IndexerForward;
 
@@ -95,6 +99,9 @@ public class OI {
         aX.whileTrue(new IndexerForward());
         aY.whileTrue(new IndexerBackwards());
 
+        aLTrigger.onTrue(new InstantCommand(Robot.collectorPivot::zeroEncoder).ignoringDisable(true));
+        aLBump.onTrue(new CollectorDown());
+        aRBump.onTrue(new CollectorUp());
 
 
     }
