@@ -18,7 +18,7 @@ public class CollectorUp extends Command {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        Robot.collectorPivot.moveMotor(-Constants.PIVOT_COLLECTOR_DOWN_PERC);
+        Robot.collectorPivot.moveMotor(-Constants.PIVOT_COLLECTOR_UP_PERC);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
