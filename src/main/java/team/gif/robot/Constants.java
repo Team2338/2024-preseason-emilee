@@ -27,6 +27,8 @@ public final class Constants {
     public static final double INDEXER_CIM_BACKWARD_PERCENT_POWER = .2;
     public static final double PIVOT_COLLECTOR_DOWN_PERC = 0.2;
     public static final double PIVOT_COLLECTOR_UP_PERC = 0.6;
+    public static final double PIVOT_COLLECTOR_UP_HOLD = 0.3;
+    public static final double PIVOT_COLLECTOR_DOWN_HOLD = 0.5;
 
 
 }

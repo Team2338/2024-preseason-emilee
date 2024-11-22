@@ -11,9 +11,14 @@ import com.ctre.phoenix.motorcontrol.TalonSRXControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import team.gif.robot.RobotMap;
+import team.gif.robot.commands.CollectorPivotHold;
 
 public class CollectorPivotSRXMotor extends SubsystemBase {
     /** Creates a new ExampleSubsystem. */
+
+    public void initDefaultCommand(){
+        setDefaultCommand(new CollectorPivotHold());
+    }
 //    public TalonSRX winch;
     private static TalonSRX motor;
 //    TalonSRX talonsrx = new TalonSRX(1);
