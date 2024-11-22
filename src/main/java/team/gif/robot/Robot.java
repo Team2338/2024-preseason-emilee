@@ -14,7 +14,7 @@ import team.gif.robot.commands.AutoDriveForward;
 import team.gif.robot.subsystems.CollectorPivotSRXMotor;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.IndexerCIM;
-import team.gif.robot.subsystems.drivers.CollectorInCIM;
+import team.gif.robot.subsystems.CollectorInCIM;
 import team.gif.robot.subsystems.drivers.Pigeon;
 
 /**
