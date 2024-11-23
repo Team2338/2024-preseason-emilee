@@ -96,6 +96,7 @@ public class OI {
          */
         aX.whileTrue(new CollectorCimControlForward());
         aY.whileTrue(new CollectorCimControlReverse());
+
         aA.whileTrue(new IndexerForward());
         aB.whileTrue(new IndexerBackwards());
 

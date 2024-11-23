@@ -19,7 +19,7 @@ public class IndexerForward extends Command {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        Robot.indexerCIM.indexercontrol(Constants.INDEXER_CIM_FORWARD_PERCENT_POWER);
+        Robot.indexerCIM.indexercontrol(-Constants.INDEXER_CIM_FORWARD_PERCENT_POWER);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.

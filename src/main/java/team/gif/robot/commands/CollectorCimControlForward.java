@@ -19,7 +19,7 @@ public class CollectorCimControlForward extends Command {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        Robot.collectorInCIM.collectorIntake(Constants.COLLECTOR_INTAKE_PERCENT_POWER);
+        Robot.collectorInCIM.collectorIntake(-Constants.COLLECTOR_INTAKE_PERCENT_POWER);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
