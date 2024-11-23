@@ -11,6 +11,7 @@ import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
 import team.gif.robot.commands.ArcadeDrive;
 import team.gif.robot.commands.AutoDriveForward;
+import team.gif.robot.commands.AutosGroups;
 import team.gif.robot.subsystems.CollectorPivotSRXMotor;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.IndexerCIM;
@@ -55,7 +56,7 @@ public class Robot extends TimedRobot {
     //driveTrain.setDefaultCommand(new TankDrive());
     collectorInCIM = new CollectorInCIM();
     indexerCIM = new IndexerCIM();
-    autonomousCommand = new AutoDriveForward(Constants.Auto_Time);
+    autonomousCommand = new AutosGroups();
     collectorPivot = new CollectorPivotSRXMotor();
 
     oi = new OI();
