@@ -1,5 +1,6 @@
 package team.gif.robot;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
@@ -77,6 +78,7 @@ public class OI {
     public final Trigger tDPadLeft = test.povLeft();
 
     public OI() {
+        DriverStation.silenceJoystickConnectionWarning(true);
         /*
          *
          * Create controller actions here
@@ -97,10 +99,10 @@ public class OI {
         aX.whileTrue(new CollectorCimControlForward());
         aY.whileTrue(new CollectorCimControlReverse());
 
-        aA.whileTrue(new IndexerForward());
-        aB.whileTrue(new IndexerBackwards());
+        aX.whileTrue(new IndexerForward());
+        aY.whileTrue(new IndexerBackwards());
 
-        aLTrigger.onTrue(new InstantCommand(Robot.collectorPivot::zeroEncoder).ignoringDisable(true));
+        aDPadDown.onTrue(new InstantCommand(Robot.collectorPivot::zeroEncoder).ignoringDisable(true));
         aLBump.onTrue(new CollectorDown());
         aRBump.onTrue(new CollectorUp());
 

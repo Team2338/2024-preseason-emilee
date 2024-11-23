@@ -6,7 +6,7 @@ import team.gif.robot.Constants;
 public class AutosGroups extends SequentialCommandGroup {
     public AutosGroups () {
         addCommands(
-                new AutoDriveForward(Constants.Auto_Time)
+                new AutoDriveForward(Constants.FINAL_COUNT)
         );
     }
 }

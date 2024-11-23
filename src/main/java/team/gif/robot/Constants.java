@@ -13,14 +13,14 @@ package team.gif.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final double Auto_Time = 5;
-    public static final double COLLECTOR_INTAKE_PERCENT_POWER = .6;
+    public static final int FINAL_COUNT = 150;
+    public static final double COLLECTOR_INTAKE_PERCENT_POWER = .55;
     public static final double COLLECTOR_REVERSE_PERCENT_POWER = .2;
-    public static final double INDEXER_CIM_FORWARD_PERCENT_POWER = .4;
+    public static final double INDEXER_CIM_FORWARD_PERCENT_POWER = .2;
     public static final double INDEXER_CIM_BACKWARD_PERCENT_POWER = .2;
     public static final double PIVOT_COLLECTOR_DOWN_PERC = 0.2;
 
-    public static final double PIVOT_COLLECTOR_UP_PERC = 0.6;
+    public static final double PIVOT_COLLECTOR_UP_PERC = 0.4;
     public static final double PIVOT_COLLECTOR_UP_HOLD_PERC = 0.3;
     public static final double PIVOT_COLLECTOR_DOWN_HOLD_PERC = 0.5;
 

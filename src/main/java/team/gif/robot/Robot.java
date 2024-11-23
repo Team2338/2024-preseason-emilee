@@ -56,12 +56,13 @@ public class Robot extends TimedRobot {
     //driveTrain.setDefaultCommand(new TankDrive());
     collectorInCIM = new CollectorInCIM();
     indexerCIM = new IndexerCIM();
-    autonomousCommand = new AutosGroups();
     collectorPivot = new CollectorPivotSRXMotor();
 
     oi = new OI();
     uiSmartDashboard = new UiSmartDashboard();
     collectorPivot.zeroEncoder();
+
+    autonomousCommand = new AutoDriveForward(Constants.FINAL_COUNT);
   }
 
   /**
@@ -80,7 +81,7 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
 
     uiSmartDashboard.updateUI();
-    System.out.println(collectorPivot.getPosition());
+//    System.out.println(collectorPivot.getPosition());
   }
 
   /** This function is called once each time the robot enters Disabled mode. */
@@ -93,8 +94,9 @@ public class Robot extends TimedRobot {
   /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
   @Override
   public void autonomousInit() {
-    if (autonomousCommand != null) {
-      autonomousCommand.schedule();
+        if (autonomousCommand != null) {
+          System.out.println("autos scheduling");
+      new AutoDriveForward(Constants.FINAL_COUNT).schedule();
     }
   }
 
