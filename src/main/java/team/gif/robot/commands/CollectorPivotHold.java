@@ -20,10 +20,10 @@ public class CollectorPivotHold extends Command {
     @Override
     public void execute() {
         if (Robot.collectorPivot.getPosition() >= -300){
-            Robot.collectorPivot.moveMotor(Constants.PIVOT_COLLECTOR_UP_HOLD);
+            Robot.collectorPivot.moveMotor(Constants.PIVOT_COLLECTOR_UP_HOLD_PERC);
         }
         if (Robot.collectorPivot.getPosition() <= -800){
-            Robot.collectorPivot.moveMotor(Constants.PIVOT_COLLECTOR_DOWN_HOLD);
+            Robot.collectorPivot.moveMotor(Constants.PIVOT_COLLECTOR_DOWN_HOLD_PERC);
         }
     }
 

@@ -4,13 +4,6 @@
 
 package team.gif.robot;
 
-import edu.wpi.first.math.geometry.Translation2d;
-import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
-import edu.wpi.first.math.trajectory.TrapezoidProfile;
-import edu.wpi.first.math.util.Units;
-
-import java.util.Timer;
-
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -28,8 +21,8 @@ public final class Constants {
     public static final double PIVOT_COLLECTOR_DOWN_PERC = 0.2;
 
     public static final double PIVOT_COLLECTOR_UP_PERC = 0.6;
-    public static final double PIVOT_COLLECTOR_UP_HOLD = 0.3;
-    public static final double PIVOT_COLLECTOR_DOWN_HOLD = 0.5;
+    public static final double PIVOT_COLLECTOR_UP_HOLD_PERC = 0.3;
+    public static final double PIVOT_COLLECTOR_DOWN_HOLD_PERC = 0.5;
 
 
 }
